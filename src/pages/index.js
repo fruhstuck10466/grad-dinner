@@ -13,7 +13,7 @@ const GRAD = {
   school: "Strathmore University · School of Computing and Engineering",
   gradDate: "Wednesday, 12 August 2026",
   intro:
-    "Ten years in the making, and finally here. This little corner of the internet holds the story so far, a place to leave me a word, and a way to send a blessing for anyone celebrating from afar. Thank you for being part of the road.",
+    "Four years and more in the making, and finally here. This little corner of the internet holds the story so far, a place to leave me a word, and a way to send a blessing for anyone celebrating from afar. Thank you for being part of the road.",
 };
 
 // A 10-year road (2016 → 2026). Warm, dash-free milestones. Photos in static/journey/<year>.jpg
@@ -166,8 +166,8 @@ export default function IndexPage() {
       {/* JOURNEY */}
       <Section id="journey">
         <p className="kicker">The road here</p>
-        <h2 className="h2">Ten years, in short</h2>
-        <p className="lead">Ten years of evening classes, growth, and so much love along the way. Tap any photo to enlarge it.</p>
+        <h2 className="h2">Four years and more, in short</h2>
+        <p className="lead">Four years and more of evening classes, growth, and so much love along the way. Tap any photo to enlarge it.</p>
         <ol className="journey">
           {JOURNEY.map((j, i) => (
             <li key={i}>
