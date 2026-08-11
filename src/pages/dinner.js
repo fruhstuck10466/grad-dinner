@@ -26,7 +26,7 @@ const SCHEDULE = [
   { t: "7:00 PM", label: "Farewell", note: "" },
 ];
 
-// One table of 15 — Amani at the head, plus 14 guests. Replace with your real list.
+// One table of 15 — Musembi JM at the head, plus 14 guests. Replace with your real list.
 const HEAD = "Musembi J.M";
 const GUEST_NAMES = [
   "Laban M.", "Dorcas M.", "Joe M.", "Agnes W.", "George O.", "Danny K.", "Kawira M.",

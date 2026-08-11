@@ -276,4 +276,4 @@ export default function IndexPage() {
   );
 }
 
-export const Head = () => <title>Amani · Graduating 2026</title>;
+export const Head = () => <title>Musembi JM · Graduating 2026</title>;
