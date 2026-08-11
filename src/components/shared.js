@@ -89,7 +89,7 @@ a{color:inherit;text-decoration:none}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 
 .badge{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
-  border:1.5px solid rgba(22,227,92,.5);border-radius:999px;padding:8px 18px;background:rgba(22,227,92,.07);margin:0 0 26px}
+  margin:0 0 26px}
 .flourish{width:70px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--green),var(--green2));margin:22px auto 0}
 .degree{font-family:var(--display);font-style:italic;color:var(--ink);font-size:clamp(16px,2.4vw,21px);margin:18px 0 0}
 .school{color:var(--muted);font-size:13.5px;letter-spacing:.02em;margin:8px 0 0}
