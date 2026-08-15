@@ -19,13 +19,13 @@ export const onImgErr = (e) => {
 };
 
 export const siteCss = `
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..500&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 .wrap{
   --bg:#FFFFFF; --ink:#0F1A13; --muted:#5A665C;
   --green:#16E35B; --green2:#0BC94D; --accent:#0C8F3D;
   --panel:#F4F8F4; --panel2:#EDF3ED; --line:#E4EBE4;
-  --display:'Fraunces',Georgia,serif; --body:'Inter',system-ui,sans-serif;
+  --display:'Cormorant Garamond',Georgia,serif; --body:'Inter',system-ui,sans-serif;
   background:var(--bg); color:var(--ink);
   font-family:var(--body); line-height:1.6;
   overflow-x:hidden; -webkit-font-smoothing:antialiased;
@@ -35,7 +35,7 @@ a{color:inherit;text-decoration:none}
 
 /* display headings share a family; sizes differ for hierarchy */
 .grad-name,.h2,.banquet-title,.foot-name,.gate-title{
-  font-family:var(--display);font-weight:500;color:var(--ink);margin:0;line-height:1.12;letter-spacing:-.01em;
+  font-family:var(--display);font-weight:400;color:var(--ink);margin:0;line-height:1.12;letter-spacing:-.01em;
 }
 .grad-name{font-size:clamp(48px,9vw,94px);letter-spacing:-.025em}
 .h2{font-size:clamp(29px,4.6vw,44px)}
@@ -49,7 +49,7 @@ a{color:inherit;text-decoration:none}
   background:rgba(255,255,255,.82);backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
-.mark{font-family:var(--display);font-weight:600;letter-spacing:.14em;color:var(--accent);font-size:16px}
+.mark{font-family:var(--display);font-weight:400;letter-spacing:.14em;color:var(--accent);font-size:16px}
 .navlinks{display:flex;gap:clamp(14px,3vw,34px);font-size:13.5px;color:var(--muted)}
 .navlinks a{transition:color .2s}
 .navlinks a:hover{color:var(--accent)}
@@ -110,8 +110,8 @@ a{color:inherit;text-decoration:none}
   background:linear-gradient(135deg,var(--panel2),var(--panel));border:1px solid var(--line)}
 .jimg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
 .jimg img:hover{transform:scale(1.05)}
-.jyear{font-family:var(--display);font-weight:600;color:var(--accent);font-size:17px}
-.jtext h3{font-family:var(--display);margin:4px 0 6px;font-size:21px;font-weight:500;color:var(--ink)}
+.jyear{font-family:var(--display);font-weight:400;color:var(--accent);font-size:17px}
+.jtext h3{font-family:var(--display);margin:4px 0 6px;font-size:21px;font-weight:400;color:var(--ink)}
 .jtext p{margin:0;color:var(--muted);font-weight:300;font-size:15px}
 
 /* details rows */
@@ -129,7 +129,7 @@ a{color:inherit;text-decoration:none}
 .head-seat{max-width:250px;margin:0 auto 14px;text-align:center;background:var(--green);color:#04240F;
   border-radius:14px;padding:16px 18px;box-shadow:0 10px 26px rgba(22,227,92,.32)}
 .head-seat .seat-no{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.8}
-.head-seat .seat-name{display:block;font-family:var(--display);font-size:23px;font-weight:600;margin:2px 0 0}
+.head-seat .seat-name{display:block;font-family:var(--display);font-size:23px;font-weight:400;margin:2px 0 0}
 .head-seat .seat-role{display:block;font-size:12px;font-style:italic;opacity:.85}
 .banquet-body{display:grid;grid-template-columns:1fr 46px 1fr;gap:18px;align-items:stretch}
 .side{display:flex;flex-direction:column;gap:12px}
@@ -144,13 +144,13 @@ a{color:inherit;text-decoration:none}
 .tent:hover{transform:translateY(-2px);border-color:var(--green);box-shadow:0 8px 18px rgba(22,227,92,.16)}
 .tent.r{text-align:right}
 .tent .seat-no{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-.tent .seat-name{display:block;font-family:var(--display);font-size:17px;font-weight:500;margin-top:2px}
+.tent .seat-name{display:block;font-family:var(--display);font-size:17px;font-weight:400;margin-top:2px}
 
 /* advice composer */
 .composer{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;margin:34px 0 0;box-shadow:0 10px 30px rgba(15,26,19,.05)}
 .afield{margin:0 0 20px}
 .afield-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px}
-.afield-label{font-family:var(--display);font-size:19px;font-weight:500}
+.afield-label{font-family:var(--display);font-size:19px;font-weight:400}
 .starter{display:block;width:100%;text-align:left;cursor:pointer;font-family:var(--display);font-style:italic;
   color:var(--muted);background:#fff;border:1px dashed rgba(22,227,92,.5);
   border-radius:10px;padding:10px 14px;font-size:15px;margin-bottom:9px;transition:all .16s}
@@ -181,7 +181,7 @@ a{color:inherit;text-decoration:none}
 .gift-badge{position:absolute;top:-11px;left:24px;background:var(--green);color:#04240F;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:999px}
 .gift-row{display:flex;align-items:baseline;gap:12px;padding:16px 0}
 .gift-k{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);flex:1}
-.gift-v{font-family:var(--display);font-size:24px;font-weight:500;letter-spacing:.01em}
+.gift-v{font-family:var(--display);font-size:24px;font-weight:400;letter-spacing:.01em}
 .gift-name{margin:6px 0 0;color:var(--muted);font-size:13px;font-style:italic}
 .gift-alt{max-width:440px;margin:16px 0 0;font-size:14.5px;color:var(--muted);line-height:1.6}
 .gift-alt a{color:var(--accent);text-decoration:underline}
@@ -190,7 +190,7 @@ a{color:inherit;text-decoration:none}
 .sched{list-style:none;margin:26px 0 0;padding:0}
 .sched li{display:grid;grid-template-columns:100px 1fr;gap:18px;padding:16px 0;border-top:1px solid var(--line)}
 .sched li:last-child{border-bottom:1px solid var(--line)}
-.sched .st{font-family:var(--display);font-weight:600;color:var(--accent);font-size:15px}
+.sched .st{font-family:var(--display);font-weight:400;color:var(--accent);font-size:15px}
 .sched .sl{font-size:16px;font-weight:500}
 .sched .sn{display:block;color:var(--muted);font-weight:300;font-size:13.5px;margin-top:2px}
 
