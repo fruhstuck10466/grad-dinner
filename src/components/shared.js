@@ -1,30 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 
-// Shared reveal-on-scroll hook, Section wrapper, image fallback, and site styles.
+// Section wrapper, image fallback, and site styles.
 // Used by both src/pages/index.js (landing) and src/pages/dinner.js.
-
-export const useReveal = () => {
-  const ref = useRef(null);
-  const [shown, setShown] = useState(false);
-  useEffect(() => {
-    const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) { setShown(true); return; }
-    const el = ref.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      ([e]) => e.isIntersecting && (setShown(true), io.disconnect()),
-      { threshold: 0.15 }
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
-  return [ref, shown];
-};
+// Sections render visible from first paint — no scroll animation, so nothing
+// can get stuck invisible on any device.
 
 export function Section({ id, children }) {
-  const [ref, shown] = useReveal();
   return (
-    <section id={id} ref={ref} className={`sec ${shown ? "in" : ""}`}>
+    <section id={id} className="sec">
       {children}
     </section>
   );
@@ -79,17 +62,8 @@ a{color:inherit;text-decoration:none}
     radial-gradient(60% 44% at 12% 108%, rgba(22,227,92,.12), transparent 55%),
     radial-gradient(60% 44% at 88% 110%, rgba(22,227,92,.12), transparent 55%);
 }
-.hero > *{animation:rise .7s ease both}
-.hero > *:nth-child(2){animation-delay:.07s}
-.hero > *:nth-child(3){animation-delay:.13s}
-.hero > *:nth-child(4){animation-delay:.19s}
-.hero > *:nth-child(5){animation-delay:.25s}
-.hero > *:nth-child(6){animation-delay:.31s}
-.hero > *:nth-child(7){animation-delay:.37s}
-@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
-
 .badge{display:inline-block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);
-  margin:0 0 26px}
+  border:1.5px solid rgba(22,227,92,.5);border-radius:999px;padding:8px 18px;background:rgba(22,227,92,.07);margin:0 0 26px}
 .flourish{width:70px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--green),var(--green2));margin:22px auto 0}
 .degree{font-family:var(--display);font-style:italic;color:var(--ink);font-size:clamp(16px,2.4vw,21px);margin:18px 0 0}
 .school{color:var(--muted);font-size:13.5px;letter-spacing:.02em;margin:8px 0 0}
@@ -111,9 +85,7 @@ a{color:inherit;text-decoration:none}
 
 .sec{
   max-width:1000px;margin:0 auto;padding:clamp(70px,10vw,120px) clamp(20px,5vw,40px);
-  opacity:0;transform:translateY(26px);transition:opacity .7s ease, transform .7s ease;
 }
-.sec.in{opacity:1;transform:none}
 .kicker{font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
 .kicker.center{text-align:center}
 .h2{margin:0 0 6px}
@@ -273,8 +245,6 @@ a{color:inherit;text-decoration:none}
   .wall{columns:1}
 }
 @media(prefers-reduced-motion:reduce){
-  .sec{opacity:1;transform:none;transition:none}
-  .hero > *{animation:none}
   .btn,.tent,.jimg img{transition:none}
 }
 `;
